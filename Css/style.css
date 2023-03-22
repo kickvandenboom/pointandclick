@@ -37,5 +37,5 @@ body {
 #mainCharacter {
     top: 200px;
     left: 200px;
-    transition: all 3s ease-in-out;
+    transition: all 1s ease-in-out;
 }
