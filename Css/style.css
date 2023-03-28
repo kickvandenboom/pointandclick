@@ -1,5 +1,6 @@
 body {
-    background-color: gray;
+    background-image: url(../Img/island_background.png);
+    background-size: cover;
     display: grid;
     grid-template-columns: auto 800px auto;
 }
@@ -14,7 +15,7 @@ body {
     width: 800px;
     height: 592px;
     grid-column-start: 2;
-    background-color: aqua;
+    background-color: black;
 }
 
 .background {
@@ -32,10 +33,104 @@ body {
     z-index: 2;
 }
 
-#tilemap {}
+
+#door0{
+    position: absolute;
+    background-color: black;
+    width: 50px;
+    height: 25px;
+    top: 354px;
+    left: 532px;
+}
+
+#door1{
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    width: 50px;
+    height: 25px;
+    top: 236px;
+    left: 428px;
+}
+
+#door2{
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    width: 50px;
+    height: 25px;
+    top: 232px;
+    left: 81px;
+}
+
+#door3{
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    width: 50px;
+    height: 25px;
+    top: 369px;
+    left: 642px;
+}
+
+#door4{
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    width: 50px;
+    height: 25px;
+    top: 140px;
+    left: 667px;
+}
+
+#door5{
+    position: absolute;
+    background-color: rgb(38, 255, 0);
+    width: 50px;
+    height: 25px;
+    top: 207px;
+    left: 535px;
+}
+
+#door6{
+    position: absolute;
+    background-color: rgb(4, 255, 0);
+    width: 50px;
+    height: 25px;
+    top: 192px;
+    left: 194px;
+}
+
+.doorClass{
+    opacity: 0;
+}
+
+#axe{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 345px;
+    left: 528px;
+}
 
 #mainCharacter {
     top: 200px;
-    left: 200px;
-    transition: all 1s ease-in-out;
+    left: 250px;
+    transition: all .5s ease-in-out;
+}
+
+.centeredH1{
+    text-align: center;
+}
+
+#finale1{
+    color: black;
+}
+
+#finale2{
+    color: black;
+}
+
+#finale3{
+    color: black;
+}
+
+#finale4{
+    color: black;
 }
