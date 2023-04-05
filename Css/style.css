@@ -158,3 +158,21 @@ h1{
     color: white;
     text-align: center;
 }
+
+#invetoryBox {
+    left: 10px;
+    top: 10px;
+    width: 180px;
+    height: 80px;
+    color: #FFF;
+    background-color: #442c1c;
+    border: #FFF 1px solid;
+    padding: 10px;
+}
+
+#invetoryBox ul {
+    list-style-type: square;
+    margin: 0px 14px;
+    padding: 0px;
+    font-size: 12px;
+}

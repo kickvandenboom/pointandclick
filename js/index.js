@@ -7,6 +7,9 @@ const characterAudio = document.getElementById("characterAudio");
 
 const title = document.getElementById("title")
 
+let inventory = [];
+const inventoryList = document.getElementById("inventoryList");
+
 let playerHasAxe = false;
 let treeChoppedDown = false;
 let playerHasKey = false;
@@ -49,6 +52,8 @@ gameWindow.onclick = function (e) {
                         updateTitle("You found an axe and picked it up.", characterAudio)
                         document.getElementById("axe").remove();
                         document.getElementById("door0").remove();
+
+                        getItem("an Axe", "anAxe");
                     }
                     break;
                 case "door1": case "door3": case "door4": //Wrong trees
@@ -66,6 +71,8 @@ gameWindow.onclick = function (e) {
         
                         document.getElementById("ground").src="Img/map_2.png"; //Switch background to new image without tree
                         document.getElementById("foreGround").src="Img/map_2_foreground.png"; //Switch foreground to new image without tree
+
+                        getItem("Small Key", "smallKey");
                     }else{
                         updateTitle("Its a medium sized tree.", characterAudio)
                     }
@@ -152,6 +159,7 @@ function goInside(){
     document.getElementById("what").remove();
     document.getElementById("title").remove();
     document.getElementById("mainCharacter").remove();
+    document.getElementById("invetoryBox").remove();
 
     playSound(endingAudio)
 
@@ -162,6 +170,33 @@ function goInside(){
 
 function endingTextAppear(){
     document.getElementById("endtext").classList.toggle("humbleDoorInvis");
+}
+
+function getItem(itemName, itemId) {
+    if (!checkItem(itemName)) {
+        inventory.push(itemName);
+        showItem(itemName, itemId);
+    }
+
+}
+
+function checkItem(item) {
+    return inventory.includes(item);
+}
+
+function showItem(itemName, itemId) {
+    let listItem = document.createElement("li");
+    listItem.id = itemId;
+    listItem.appendChild(document.createTextNode(itemName));
+    inventoryList.appendChild(listItem);
+}
+
+function removeItem(itemName, itemId) {
+    inventory = inventory.filter(function (newInventory) {
+        return newInventory !== itemName;
+    });
+    document.getElementById(itemId).remove();
+
 }
 
 window.onload = onLoad;
