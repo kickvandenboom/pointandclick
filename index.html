@@ -16,7 +16,7 @@
     <meta content="#43B581" data-react-helmet="true" name="theme-color" />
     <meta name="twitter:card" content="summary_large_image">
 
-    <title>Document</title>
+    <title>Point And Click Adventure</title>
 </head>
 <body>
     <h1 id="title">You wake up outside of your house. (Click to move)</h1>
@@ -43,13 +43,27 @@
             <div id="door6" class="doorClass"></div>
 
             <img id="axe" src="Img/axe.png">
-        </div>
+            <img id="what" class="humbleDoorInvis" src="Img/humble_door.png" width="36" height="49">
 
-        <h1 id="finale1" class="centeredH1">You open the door...</h1>
-        <h1 id="finale2" class="centeredH1">And when you entered your house...</h1>
-        <h1 id="finale3" class="centeredH1">You saw something you have never seen before...</h1>
-        <h1 id="finale4" class="centeredH1">THE END</h1>
+            <img id="foreGround" src="Img/map_foreground.png" alt="foreground" width="800" height="592">
+
+            <img id="humbleMan" src="Img/humble_man.gif" class="humbleDoorInvis" width="50" height="50">
+
+            <h1 id="endtext" class="humbleDoorInvis">THE END</h1>
+        </div>
     </div>
+
+    <audio id="humblemanAudio">
+        <source src="Audio/humbleman_sfx.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="characterAudio">
+        <source src="Audio/gibberish.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="endingAudio">
+        <source src="Audio/suspence.mp3" type="audio/mpeg">
+    </audio>
 
     <script src="js/index.js"></script>
 </body>

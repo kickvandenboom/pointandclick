@@ -1,13 +1,14 @@
 body {
-    background-image: url(../Img/island_background.png);
     background-size: cover;
     display: grid;
     grid-template-columns: auto 800px auto;
+    background-color: black;
 }
 
 #title {
     grid-column-start: 2;
     text-align: center;
+    color: white;
 }
 
 #gameWindow {
@@ -97,6 +98,24 @@ body {
     left: 194px;
 }
 
+#door7{
+    position: absolute;
+    background-color: rgb(76, 0, 255);
+    width: 50px;
+    height: 25px;
+    top: 296px;
+    left: 408px;
+}
+
+#door777{
+    position: absolute;
+    background-color: rgb(0, 26, 255);
+    width: 50px;
+    height: 25px;
+    top: 174px;
+    left: 695px;
+}
+
 .doorClass{
     opacity: 0;
 }
@@ -109,28 +128,33 @@ body {
     left: 528px;
 }
 
+#what{
+    position: absolute;
+    top: 150px;
+    left: 703px;
+}
+
+.humbleDoorInvis{
+    visibility: collapse;
+}
+
 #mainCharacter {
     top: 200px;
     left: 250px;
     transition: all .5s ease-in-out;
 }
 
+#humbleMan{
+    position: absolute;
+    top: 279px;
+    left: 386px;
+}
+
 .centeredH1{
     text-align: center;
 }
 
-#finale1{
-    color: black;
-}
-
-#finale2{
-    color: black;
-}
-
-#finale3{
-    color: black;
-}
-
-#finale4{
-    color: black;
+h1{
+    color: white;
+    text-align: center;
 }
